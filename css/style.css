@@ -1,0 +1,158 @@
+/* Style CSS pour le site web de FibroEnergie */
+/* Define font-face for Jua */
+@font-face {
+    font-family: "Jua";
+    src: url("../fonts/Jua-Regular.ttf") format("truetype"); /* Relative path to your font file */
+}
+  
+/* Define font-face for Lemon */
+@font-face {
+    font-family: "Lemon";
+    src: url("../fonts/Lemon-Regular.ttf") format("truetype"); /* Relative path to your font file */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.svgAnim {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+.svgAnim text {
+	animation: stroke 4s alternate;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+	stroke-width: 2;
+	stroke: #365FA0;
+	font-size: 64px;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: white;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: white; }
+	80%  {fill: rgba(72,138,204,0); stroke: white; stroke-width: 3; }
+	100% {
+		fill: white; stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {background-color: #007bff};
+
+
+/* Styles généraux */
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+body {
+    font-family:Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+.nav-item a:hover { background-color: #e5e3e3; }
+/* nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+nav ul li a:hover {
+    background-color: #555;
+} */
+
+/* En-tête */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+header p {
+    font-size: 1.2em;
+}
+
+/* Section principale */
+main {
+    padding: 50px 20px;
+}
+section {
+    margin-bottom: 40px;
+}
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+section p {
+    font-size: 1.1em;
+}
+
+/* Bouton */
+.btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-heading {
+    color: #007bff;
+    font-family: "Lemon";
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
