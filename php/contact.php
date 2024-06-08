@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["message"];
 
     // Envoyer un e-mail de notification
-    $to = "votre-email@exemple.com"; // Remplacer par l'adresse e-mail à laquelle vous souhaitez recevoir les messages
-    $subject = "Nouveau message de contact de FibroEnergie";
+    $to = "kaboreabdoulahi1997@gmail.com"; // Remplacer par l'adresse e-mail à laquelle vous souhaitez recevoir les messages
+    $subject ="Nouveau message de contact de FibroEnergie";
     $body = "Nom: $name\nEmail: $email\nMessage:\n$message";
     $headers = "From: $email";
 
@@ -22,3 +22,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+
