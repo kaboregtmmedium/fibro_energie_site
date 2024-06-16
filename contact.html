@@ -26,12 +26,36 @@
     </nav>
 
     <!-- Section principale -->
-    <main>
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <section>
+                    <h2>Contactez-nous</h2>
+                    <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter :</p>
+                    <form action="php/contact.php" method="POST" onsubmit="return validateForm()">
+                        <label for="name">Nom :</label><br>
+                        <input type="text" id="name" name="name" class="form-control" required><br>
+                        <label for="email">Email :</label><br>
+                        <input type="email" id="email" name="email" class="form-control" required><br>
+                        <label for="message">Message :</label><br>
+                        <textarea id="message" name="message" class="form-control" rows="4" required></textarea><br>
+                        <input type="submit" value="Envoyer" class="btn btn-primary">
+                    </form>
+                </section>
+            </div>
+            <div class="col-lg-6">
+                <section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.0874208014043!2d-1.5301320251883843!3d12.377076227634419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e95d4289862a9%3A0x33de00a3bb48051d!2sH%C3%B4tel%20de%20ville%20de%20Ouagadougou!5e0!3m2!1sfr!2sbf!4v1718479720092!5m2!1sfr!2sbf" style="border:0; width: 100%; height:60vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- <main class="d-flex flex-row justify-content-between">
         <section>
             <h2>Contactez-nous</h2>
             <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter :</p>
             <form action="php/contact.php" method="POST" onsubmit="return validateForm()">
-            <!--  champs de formulaire ici -->
              <form action="php/contact.php" method="POST">
                 <label for="name">Nom :</label><br>
                 <input type="text" id="name" name="name" required><br>
@@ -41,7 +65,10 @@
                 <textarea id="message" name="message" rows="4" required></textarea><br>
                 <input type="submit" value="Envoyer">
         </section>
-    </main>
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.0874208014043!2d-1.5301320251883843!3d12.377076227634419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e95d4289862a9%3A0x33de00a3bb48051d!2sH%C3%B4tel%20de%20ville%20de%20Ouagadougou!5e0!3m2!1sfr!2sbf!4v1718479720092!5m2!1sfr!2sbf" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main> -->
 
     <!-- Pied de page -->
     <footer>
