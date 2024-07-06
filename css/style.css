@@ -4,7 +4,7 @@
     font-family: "Jua";
     src: url("../fonts/Jua-Regular.ttf") format("truetype"); /* Relative path to your font file */
 }
-  
+
 /* Define font-face for Lemon */
 @font-face {
     font-family: "Lemon";
@@ -14,34 +14,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 .svgAnim {
-	font-family: "Russo One", sans-serif;
-	width: 100%; height: 100%;
+    font-family: "Russo One", sans-serif;
+    width: 100%; height: 100%;
     background-color: #003366;
 }
 .svgAnim text {
-	animation: stroke 4s alternate;
+    animation: stroke 4s alternate;
     animation-iteration-count: 3;
     animation-fill-mode: forwards;
-	stroke-width: 2;
-	stroke: #365FA0;
-	font-size: 64px;
+    stroke-width: 2;
+    stroke: #365FA0;
+    font-size: 64px;
 }
 
 @keyframes stroke {
-	0%   {
-		fill: rgba(72,138,204,0); stroke: white;
-		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
-	}
-	70%  {fill: rgba(72,138,204,0); stroke: white; }
-	80%  {fill: rgba(72,138,204,0); stroke: white; stroke-width: 3; }
-	100% {
-		fill: white; stroke: rgba(54,95,160,0);
-		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-	}
+    0%   {
+        fill: rgba(72,138,204,0); stroke: white;
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(72,138,204,0); stroke: white; }
+    80%  {fill: rgba(72,138,204,0); stroke: white; stroke-width: 3; }
+    100% {
+        fill: white; stroke: rgba(54,95,160,0);
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
 }
 
-.wrapper {background-color: #007bff};
-
+.wrapper {background-color: #007bff;}
 
 /* Styles généraux */
 html {
@@ -62,7 +61,7 @@ main {
 }
 
 body {
-    font-family:Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -81,31 +80,6 @@ body {
     color: #ffffff !important;
     background-color: #003366 !important;
 }
-
-/* .nav-item a:hover { background-color: #e5e3e3; } */
-/* nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-nav ul li a:hover {
-    background-color: #555;
-} */
 
 /* En-tête */
 header {
@@ -128,6 +102,8 @@ main {
 }
 section {
     margin-bottom: 40px;
+    margin: 1px 0;
+    background-color: #F0F0F0;
 }
 section h2 {
     font-size: 2em;
@@ -135,6 +111,9 @@ section h2 {
 }
 section p {
     font-size: 1.1em;
+}
+p {
+    padding: 10px 0;
 }
 
 /* Bouton */
@@ -170,4 +149,39 @@ footer {
     text-align: center;
     padding: 10px 0;
     flex-shrink: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+    .nav-pills {
+        flex-direction: column;
+    }
+    .nav-pills .nav-link {
+        margin-bottom: 5px;
+    }
+    .carousel-caption {
+        font-size: 0.8em;
+    }
+}
+
+/* Image Hover Effect */
+img {
+    transition: transform 0.5s ease; /* Définir la transition */
+}
+
+img:hover {
+    transform: scale(2.2); /* Augmenter l'échelle de l'image au survol */
 }

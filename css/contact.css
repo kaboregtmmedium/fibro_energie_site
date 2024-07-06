@@ -34,6 +34,18 @@ nav .nav-link.active {
 }
 
 /* Section principale */
+.contact-bg {
+    background-image: url('../images/contact-background.jpg'); /* Chemin vers votre image d'arrière-plan */
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 60px); /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+    padding-top: 100px; /* Ajustement pour l'espace en haut de la page */
+    padding-bottom: 60px; /* Ajoutez du padding en bas pour éviter le chevauchement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     flex: 1;
     display: flex;
@@ -91,7 +103,7 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* Media Queries */
+/* Media Queries pour la responsivité */
 @media (max-width: 768px) {
     nav .nav-pills {
         flex-direction: column;
@@ -101,4 +113,23 @@ footer {
     main section {
         padding: 10px;
     }
+
+    .contact-bg {
+        padding: 20px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .bg-white {
+        padding: 20px;
+    }
+}
+form textarea {
+    height: 20px; /* Ajuster la hauteur selon vos besoins */
+    padding: 5px; /* Réduire le padding interne */
+    margin-bottom: 5px; /* Réduire l'espace entre les champs */
+    width: 60%;
+    max-width: 100%;
 }
