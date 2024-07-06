@@ -1,3 +1,135 @@
+/* Style général */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e9f5ff;  /* Fond bleu pastel */
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
 nav {
-	border-bottom: 5px solid #003366;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    font-weight: 500;
+    color: #333;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+nav .nav-link.active {
+    background-color: #007bff;
+    color: #ffffff !important;
+}
+
+/* Section principale */
+.contact-bg {
+    background-image: url('../images/contact-background.jpg'); /* Chemin vers votre image d'arrière-plan */
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 60px); /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+    padding-top: 100px; /* Ajustement pour l'espace en haut de la page */
+    padding-bottom: 60px; /* Ajoutez du padding en bas pour éviter le chevauchement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Formulaire */
+form .form-label {
+    font-weight: bold;
+}
+
+form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Pied de page */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    nav .nav-pills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section {
+        padding: 10px;
+    }
+
+    .contact-bg {
+        padding: 20px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .bg-white {
+        padding: 20px;
+    }
+}
+form textarea {
+    height: 20px; /* Ajuster la hauteur selon vos besoins */
+    padding: 5px; /* Réduire le padding interne */
+    margin-bottom: 5px; /* Réduire l'espace entre les champs */
+    width: 60%;
+    max-width: 100%;
 }
